@@ -13,3 +13,30 @@ source /opt/ros/foxy/local_setup.bash
 source /home/user/catkin_ws/devel/setup.bash
 source /home/user/ros2_ws/install/local_setup.bash
 ```
+
+## Basic Examples
+*.bashrc_bridge* will contain something like
+```
+source /opt/ros/noetic/setup.bash
+source /opt/ros/foxy/local_setup.bash
+source /home/user/catkin_ws/devel/setup.bash
+source /home/user/ros2_ws/install/local_setup.bash
+```
+
+*.bashrc_ros1* will contain something like
+```
+export ROS_DISTRO=noetic
+source /opt/ros/$ROS_DISTRO/setup.bash
+source /home/user/catkin_ws/devel/setup.bash
+```
+And *.bashrc_ros2* will contain something like
+```
+export ROS_DISTRO=foxy
+source /opt/ros/$ROS_DISTRO/setup.bash
+source /home/user/ros2_ws/install/local_setup.bash
+```
+
+The ROS1-Bridge is launched in shell #1, the ROS1 node is launched in shell #2, and the ROS2 node is launched in shell #3.
+
+The basic examples go thorugh a talker and listener in ROS1 and ROS2 as well as the other way around, a cross-ROS1/2 service, and then more interestingly the simulation examples: publishing an image in ROS1 and viewing in ROS2; commanding motion in a ROS1 Gazebo simulation using a ROS2 node; calling the ROS1 Gazebo reset service from ROS2. 
+
