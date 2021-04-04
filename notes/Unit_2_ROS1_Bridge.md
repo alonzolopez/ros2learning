@@ -40,3 +40,12 @@ The ROS1-Bridge is launched in shell #1, the ROS1 node is launched in shell #2, 
 
 The basic examples go thorugh a talker and listener in ROS1 and ROS2 as well as the other way around, a cross-ROS1/2 service, and then more interestingly the simulation examples: publishing an image in ROS1 and viewing in ROS2; commanding motion in a ROS1 Gazebo simulation using a ROS2 node; calling the ROS1 Gazebo reset service from ROS2. 
 
+In the Construct Sim, source the bridge's .bashrc with
+```
+. /home/user/.bashrc_bridge
+```
+
+Launch the bridge with
+```
+ros2 run ros1_bridge dynamic_bridge
+```

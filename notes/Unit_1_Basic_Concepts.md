@@ -18,7 +18,11 @@ A package contains:
 - **package.xml**: package info and dependencies
 
 ## Create a package
-To create a package:
+First, in order to use the ROS2 command line tools, 
+```
+source /opt/ros/foxy/setup.bash
+```
+Then create a package:
 ```
 ros2 pkg create <package_name> --build-type ament_cmake --dependencies <package_dependencies>
 ```
